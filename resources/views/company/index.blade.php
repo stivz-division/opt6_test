@@ -1,5 +1,16 @@
 @extends('layout.default')
 
+@pushonce('js')
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#table_show').DataTable({
+                "paging": false
+            });
+            $('.dataTables_info').remove();
+        });
+    </script>
+@endpushonce
+
 @section('body')
     <div class="my-3">
         <div class="d-flex align-items-center justify-content-start">
